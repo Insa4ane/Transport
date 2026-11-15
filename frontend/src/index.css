@@ -1,0 +1,104 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: #1f2937;
+  background: #f5f7fa;
+  line-height: 1.5;
+}
+
+a { color: #2563eb; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1 { font-size: 1.6rem; margin: 0 0 16px; }
+
+/* ---------- nagłówek ---------- */
+.header {
+  display: flex;
+  justify-content: space-between; /* logo z lewej, linki z prawej */
+  align-items: center;
+  padding: 12px 24px;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+}
+.logo { font-weight: 700; font-size: 1.1rem; color: #111827; }
+.logo:hover { text-decoration: none; }
+.header-right { display: flex; align-items: center; gap: 16px; }
+.user-badge { color: #6b7280; font-size: 0.9rem; }
+
+/* ---------- układ strony ---------- */
+main { max-width: 800px; margin: 24px auto; padding: 0 16px; }
+main.narrow { max-width: 420px; }
+
+/* ---------- przyciski ---------- */
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+.btn:hover { background: #1d4ed8; text-decoration: none; }
+.btn:disabled { opacity: 0.6; cursor: default; }
+.btn-secondary { background: #e5e7eb; color: #111827; }
+.btn-secondary:hover { background: #d1d5db; }
+
+/* ---------- formularze ---------- */
+.form { display: flex; flex-direction: column; gap: 14px; }
+.form label { display: flex; flex-direction: column; gap: 4px; font-size: 0.9rem; font-weight: 500; }
+input {
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #fff;
+}
+input:focus { outline: 2px solid #93c5fd; border-color: #2563eb; }
+fieldset { border: 1px solid #d1d5db; border-radius: 6px; padding: 8px 12px; }
+legend { font-size: 0.9rem; font-weight: 500; padding: 0 4px; }
+.form label.radio { flex-direction: row; align-items: center; gap: 8px; font-weight: 400; padding: 4px 0; }
+.form label.radio input { width: auto; }
+.form-footer { margin-top: 20px; text-align: center; color: #6b7280; }
+
+/* ---------- lista przejazdów ---------- */
+.filters { display: flex; gap: 8px; margin-bottom: 16px; }
+.filters input { flex: 1; }
+
+.ride-card {
+  display: block;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  color: inherit;
+}
+.ride-card:hover { border-color: #2563eb; text-decoration: none; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.ride-route { font-size: 1.1rem; font-weight: 600; }
+.ride-meta { margin: 2px 0; }
+
+.card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 16px 0;
+}
+.card h1 { margin-bottom: 8px; }
+.card p { margin: 4px 0; }
+
+/* ---------- komunikaty ---------- */
+.muted { color: #6b7280; }
+.error { color: #b91c1c; background: #fee2e2; padding: 8px 12px; border-radius: 6px; margin: 8px 0; }
+.success { color: #166534; background: #dcfce7; padding: 8px 12px; border-radius: 6px; margin: 8px 0; }
+.notice { color: #1e40af; background: #dbeafe; padding: 8px 12px; border-radius: 6px; margin: 8px 0 16px; }
+
+/* ---------- moje rezerwacje ---------- */
+.booking { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.booking .card p, .booking p { margin: 2px 0; }
+.btn-danger { background: #dc2626; }
+.btn-danger:hover { background: #b91c1c; }
