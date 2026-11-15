@@ -51,7 +51,7 @@ Wartości domyślne są w `backend/API/config.py`. Można je nadpisać zmiennymi
 
 | Zmienna | Znaczenie | Domyślnie |
 |---|---|---|
-| `SECRET_KEY` | klucz podpisujący tokeny JWT | klucz deweloperski (z ostrzeżeniem w logu) |
+| `SECRET_KEY` | klucz podpisujący tokeny JWT | klucz deweloperski (z ostrzeżeniem w logu) Klucz SECRET_KEY ma w kodzie wartość deweloperską, w prawdziwym wdrożeniu trzymałbym go w .env poza repozytorium.“ |
 | `DB_PATH` | ścieżka do pliku bazy SQLite | `backend/Database/app.db` |
 | `CORS_ORIGINS` | dozwolone adresy frontendu, rozdzielone przecinkami | `http://localhost:5173,http://127.0.0.1:5173` |
 
