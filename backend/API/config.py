@@ -7,7 +7,9 @@ APP_TITLE = "Wspólne przejazdy API"
 API_PREFIX = "/api"
 
 DB_PATH = os.environ.get("DB_PATH", str(BACKEND_DIR / "Database" / "app.db"))
-
+# Wartość deweloperska, żeby projekt dało się uruchomić bez konfiguracji.
+# W prawdziwej aplikacji sekret trzymałbym w pliku .env (poza repozytorium)
+# i ustawiał przez zmienną środowiskową SECRET_KEY.
 DEV_SECRET_KEY = "dev-only-secret-change-me-0123456789abcdef"
 SECRET_KEY = os.environ.get("SECRET_KEY", DEV_SECRET_KEY)
 if SECRET_KEY == DEV_SECRET_KEY:
